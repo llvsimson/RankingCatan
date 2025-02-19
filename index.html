@@ -89,7 +89,7 @@
 
     <script>
         async function carregarRanking() {
-            let response = await fetch("https://script.google.com/macros/s/AKfycbweSHrI4AhVHrxgROADU0pmi4hT_SHQ6g-2sfdizQolfvYYuPjeA8U1ikWV8kGRxh8G/exec");
+            let response = await fetch("https://script.google.com/macros/s/AKfycbznMkDt2HZKPIf-if1PxvKC4n3g79__ZYmX0bt_I_xqjOBjDaWN9iPIrTxBI_LUN9WM/exec");
             let data = await response.json();
             let tabela = "<table><tr><th>Nome</th><th>Elo</th></tr>";
             
@@ -108,7 +108,7 @@
                 return;
             }
 
-            let resposta = await fetch("SUA_URL_DA_API_DO_APPS_SCRIPT", {
+            let resposta = await fetch("https://script.google.com/macros/s/AKfycbznMkDt2HZKPIf-if1PxvKC4n3g79__ZYmX0bt_I_xqjOBjDaWN9iPIrTxBI_LUN9WM/exec", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ nome: nomeJogador })
