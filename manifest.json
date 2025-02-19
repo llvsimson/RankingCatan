@@ -1,0 +1,21 @@
+{
+    "name": "Ranking de Catan",
+    "short_name": "Catan Rank",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#FFD700",
+    "icons": [
+      {
+        "src": "https://play-lh.googleusercontent.com/E9qY08TtQfdGHXZQYnzS7F4zA-14OQ9ntU4X7TVE-kq3rAC23bekzA4eqgk1W8KpTxj9",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://play-lh.googleusercontent.com/E9qY08TtQfdGHXZQYnzS7F4zA-14OQ9ntU4X7TVE-kq3rAC23bekzA4eqgk1W8KpTxj9",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
