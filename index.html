@@ -69,6 +69,9 @@
             background-color: #FFC107; /* Cor mais escura no hover */
         }
     </style>
+<input type="text" id="novoJogador" placeholder="Nome do jogador">
+<button class="botao-adicionar" onclick="adicionarJogador()">Adicionar Jogador</button>
+
     <script>
         async function carregarRanking() {
             let response = await fetch("https://script.google.com/macros/s/AKfycbweSHrI4AhVHrxgROADU0pmi4hT_SHQ6g-2sfdizQolfvYYuPjeA8U1ikWV8kGRxh8G/exec");
