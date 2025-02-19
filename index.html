@@ -89,7 +89,7 @@
 
     <script>
         async function carregarRanking() {
-            let response = await fetch("https://script.google.com/macros/s/AKfycbxFXmCwQ9bktfvTc-1SVBRX4rO574NgWcUlaETmgSzbq6Op-iexZ0AGfjEA4LFBKsZU/exec");
+            let response = await fetch("https://script.google.com/macros/s/AKfycby0MouknB_0DhQ5eg-Wu4JC3mwr_XZ-UY1gcJAflfRHjZkCpvUYo1ludTHxmLAx2AFA/exec");
             let data = await response.json();
             let tabela = "<table><tr><th>Nome</th><th>Elo</th></tr>";
             
@@ -108,7 +108,7 @@
         return;
     }
 
-    let resposta = await fetch("https://script.google.com/macros/s/AKfycbxFXmCwQ9bktfvTc-1SVBRX4rO574NgWcUlaETmgSzbq6Op-iexZ0AGfjEA4LFBKsZU/exec", {
+    let resposta = await fetch("https://script.google.com/macros/s/AKfycby0MouknB_0DhQ5eg-Wu4JC3mwr_XZ-UY1gcJAflfRHjZkCpvUYo1ludTHxmLAx2AFA/exec", {
         method: "POST",
         mode: "no-cors",  // 🔹 Isso pode ser necessário para evitar bloqueios de CORS
         headers: {
