@@ -3,7 +3,6 @@
 <head>
     <link rel="manifest" href="manifest.json">
 
-      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking do Catan</title>
@@ -68,9 +67,31 @@
         .botao-form:hover {
             background-color: #FFC107; /* Cor mais escura no hover */
         }
+
+        .input-novo-jogador {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .botao-adicionar {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .botao-adicionar:hover {
+            background-color: #45a049; /* Verde escuro */
+        }
+
     </style>
-<input type="text" id="novoJogador" placeholder="Nome do jogador">
-<button class="botao-adicionar" onclick="adicionarJogador()">Adicionar Jogador</button>
 
     <script>
         async function carregarRanking() {
@@ -86,6 +107,26 @@
             document.getElementById("ranking").innerHTML = tabela;
         }
 
+        async function adicionarJogador() {
+            let nomeJogador = document.getElementById("novoJogador").value.trim();
+            if (!nomeJogador) {
+                alert("Digite um nome válido.");
+                return;
+            }
+
+            let resposta = await fetch("SUA_URL_DA_API_DO_APPS_SCRIPT", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nome: nomeJogador })
+            });
+
+            let resultado = await resposta.text();
+            alert(resultado);
+
+            document.getElementById("novoJogador").value = ""; // Limpa o campo após envio
+            carregarRanking(); // Atualiza a tabela
+        }
+
         window.onload = carregarRanking;
     </script>
 </head>
@@ -96,6 +137,14 @@
     <a href="https://forms.gle/VGroY1TUnx1Turpc7" target="_blank">
         <button class="botao-form">Adicionar Nova Partida</button>
     </a>
+
+    <br><br>
+
+    <!-- 🔹 Formulário para adicionar novo jogador -->
+    <input type="text" id="novoJogador" class="input-novo-jogador" placeholder="Nome do jogador">
+    <button class="botao-adicionar" onclick="adicionarJogador()">Adicionar Novo Jogador</button>
+
+    <br><br>
 
     <div id="ranking">Carregando...</div>
 </body>
